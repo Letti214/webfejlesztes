@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latte Letti kávézó kávé teszt">
+    <meta name="author" content="Dani Letícia">
+    <link rel="stylesheet" href="LatteLetti_style.css">
+    <title>Letti Latte</title>
+    <link rel="icon" type="image/x-icon" href="Kepek/FAVICON.png">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script src="Galleria/jquery-3.7.1.min.js"></script>
+    <script src="Validalas/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#teszt").validate({
+                rules: {
+                    nev: "required",
+                    KaveHossz: "required",
+                    hab: "required",
+                    shot: "required",
+                    kuldes: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    nev: "Kérlek válaszolj!",
+                    KaveHossz: "Kérlek válaszolj!",
+                    hab: "Kérlek válassz!",
+                    shot: "Kérlek válassz!",
+                },
+            });
+        });
+    </script>
+
+    <header>
+        <h1>Letti Latte</h1>
+        <nav>
+            <ul>
+                <li><a href="LatteLetti_Fooldal.html">Főoldal</a></li>
+                <li><a href="LatteLetti_Menu.html">Menü</a></li>
+                <li><a href="LatteLetti_Galeria.html">Galéria</a></li>
+                <li><a class="active" href="#">Milyen kávét válasszak?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <article class="teszt">
+            <h3>Tudd meg milyen kávé való neked!</h3>
+            <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="teszt" novalidate>
+                <p>
+                    <label>Milyen névre kéred a kávét?<br>
+                        <input type="text" name="nev"></label>
+                </p>
+                <p>
+                    <label for="KaveHossz">Milyen hosszú kávét kérsz?</label>
+                    <input type="range" class="slider" id="KaveHossz" name="KaveHossz" min="0" max="10" step="1">
+                </p>
+                <p>
+                    <label for="hab">Milyen habos kávét kérsz?</label><br>
+                    <select id="hab" name="hab" size="4">
+                        <option value="0">Tej nélkül kérem</option>
+                        <option value="1">Krémes</option>
+                        <option value="2">Habos</option>
+                        <option value="3">Nagyon habos</option>
+                    </select>
+                </p>
+                <P>
+                    Hány espresso adagot kérsz?<br>
+                    <select id="shot" name="shot" size="2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </P>
+                <p>
+                    <label for="izesito">Ízesítőt kérsz bele?</label><br>
+                    <select id="izesito" name="izesito" size="4">
+                        <option selected value="0">Nem</option>
+                        <option value="mez">Méz</option>
+                        <option value="csoki">Csoki</option>
+                        <option value="karamell">Karamell</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Koffeinmentesen kéred?<br>
+                        <input type="checkbox" name="koffeinmentes">Igen</label>
+                </p>
+                <p><label>Mi a kedvenc színed?
+                        <input type="color" id="szin" name="szin"></label></p>
+                <p>
+                    Hányszor voltál már nálunk?<br>
+                    <label><input type="radio" name="voltMar" value="0">Még sose voltam</label><br>
+                    <label><input type="radio" name="voltMar" value="1">1-2 alkalommal</label><br>
+                    <label><input type="radio" name="voltMar" value="2">3+ alkalommal</label>
+                </p>
+                <p>
+                    Mikor tervezel jönni?
+                    <input type="date" id="datum">
+                </p>
+                <input type="submit" id="kuldes" value="Küldés">
+            </form>
+        </article>
+        <article class="teszt">
+            <div onclick="kave()" class="gomb">Eredményhez kattints ide</div>
+            <p id="kaveFajta"></p>
+            <p id="kaveKep"></p>
+
+        </article>
+    </div>
+    <footer>
+        <p>A weboldal csak tanulmányi célból készült, a kávézó kitalált.</p>
+    </footer>
+</body>
+</html>

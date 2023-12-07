@@ -1,0 +1,8 @@
+Dani Letícia
+Az oldal témája: 
+Egy kitalált  kávézó weboldala. Kitölthető teszt, hogy megtudd milyen kávé való neked.
+JS kód:
+A “Kávé teszt” oldalon található a JS kódom. Használatának célja a válaszok kiértékelése és válasz küldése. Az űrlapot kitöltve a elágazással a megfelelő kategóriába kerül a kitöltő és így megkapja a neki megfelelő kávét.
+Font:
+	https://fonts.google.com/
+	AbeeZee

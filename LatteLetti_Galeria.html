@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latte Letti kávézó galéria">
+    <meta name="author" content="Dani Letícia">
+    <link rel="stylesheet" href="LatteLetti_style.css">
+    <title>Letti Latte</title>
+    <link rel="icon" type="image/x-icon" href="Kepek/FAVICON.png">
+
+    <script src="Galleria/jquery-3.7.1.min.js"></script>
+    <script src="Galleria/galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="Galleria/galleria-1.6.1/dist/themes/miniml/galleria.miniml.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#images').galleria({
+                width: 800,
+                height: 650
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Letti Latte</h1>
+        <nav>
+            <ul>
+                <li><a href="LatteLetti_Fooldal.html">Főoldal</a></li>
+                <li><a href="LatteLetti_Menu.html">Menü</a></li>
+                <li><a class="active" href="#">Galéria</a></li>
+                <li><a href="LatteLetti_KaveTeszt.html">Milyen kávét válasszak?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="center">
+            <article id="images" class="galleria">
+                <img src="Kepek/Coffee_3.jpg" alt="Cappuccino Croissant-tal" title=" Cappuccino Croissant-tal">
+                <img src="Kepek/Coffee_2.jpg" alt="Latte Croissant-tal" title="Latte Croissant-tal">
+                <img src="Kepek/Coffee_6.jpg" alt="Latte" title=" Latte">
+                <img src="Kepek/Pastries_3.jpg" alt="Gyümölcsös péksütemény" title="Gyümölcsös péksütemény">
+                <img src="Kepek/Pastries_5.jpg" alt="Sok péksütemény" title=" Sok péksütemény">
+                <img src="Kepek/PastriesALot_2.jpg" alt="Péksütemények a pultnál" title=" Péksütemények a pultnál">
+                <img src="Kepek/Cafe_2.jpg" alt="A kávézó" title="A kávézó">
+                <img src="Kepek/PastriesPink_2.jpg" alt="Péksütemények a kávézó pultjánál"
+                    title="Péksütemények a kávézó pultjánál">
+            </article>
+        </div>
+    </div>
+    <footer>
+        <p>A weboldal csak tanulmányi célból készült, a kávézó kitalált.</p>
+    </footer>
+</body>
+
+</html>
